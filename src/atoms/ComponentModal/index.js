@@ -1,17 +1,12 @@
-import { Button, Modal } from "antd";
-import ComponentButton from "../ComponentButton";
+import { Modal } from "antd";
 
 const ComponentModal = ({
   open,
   handleOk,
   handleClose,
-  backText,
-  submitText,
   title,
   children,
   width,
-  footer,
-  loader,
 }) => {
   return (
     <Modal

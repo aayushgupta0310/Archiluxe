@@ -14,7 +14,7 @@ const UploadImageModal = ({ open, handleClose, title }) => {
       <div className="px-10 py-12">
         <div className="bg-[#F6F6F6] border-dashed border-[#B4B4B4] rounded-[4px] px-14 py-[70px]">
           <div className="pb-7">
-            <img src={UploadImage} alt="Upload Image" className="m-auto" />
+            <img src={UploadImage} alt="Upload-Image" className="m-auto" />
           </div>
           <Button className="flex items-center gap-2 bg-[#946039] h-10 w-[181px] mx-auto">
             <PlusCircleFilled className="text-[#ffffff]" />

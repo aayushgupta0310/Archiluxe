@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MainContainer from "../../sub-components/MainContainer";
 import HomeBannerImage from "../../assets/svg-icons/home-banner.svg";
 import SearchForm from "../../sub-components/SearchForm";

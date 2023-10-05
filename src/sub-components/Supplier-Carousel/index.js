@@ -1,4 +1,3 @@
-import { Carousel } from "antd";
 import SupplierLogo1 from "../../assets/svg-icons/supplierlogo1.svg";
 import SupplierLogo2 from "../../assets/svg-icons/supplierlogo2.svg";
 import SupplierLogo3 from "../../assets/svg-icons/supplierlogo3.svg";

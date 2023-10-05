@@ -1,7 +1,6 @@
 import { Input } from "antd";
 import SearchIcon from "../../assets/svg-icons/search.svg";
 import ImageUpload from "../../assets/svg-icons/image-upload.svg";
-import { SEARCH_BY_IMAGE_URL } from "../../routes";
 import { useNavigate } from "react-router";
 
 const SearchForm = ({onSearch,onClick}) => {
