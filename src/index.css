@@ -1,13 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@font-face {
+  font-family: "GeorgiaRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Regular"),
+    url("../src/assets/fonts/georgia-2-cufonfonts-webfont/georgia.woff")
+      format("woff");
+}
+
+@layer base {
+  .container {
+    @apply px-5 mx-auto;
+  }
+  /* custom header css */
+  .header-custom ul li {
+    @apply text-white text-sm cursor-pointer font-GeorgiaRegular;
+  }
+  .carousel-home .carousel-item img {
+    @apply h-[457px] object-cover max-w-[285px] w-full;
+  }
+  .carousel-home .carousel-item {
+    @apply pl-4;
+  }
+  .carousel-home {
+    @apply h-[457px];
+  }
+  .heading-small-border {
+    @apply relative;
+  }
+  .heading-small-border::after {
+    @apply absolute content-[""] border-b-4 border-[#535353] w-[152px] bottom-0 left-1/2 -translate-x-1/2;
+  }
+  .collapse-tabs-design .ant-collapse {
+    @apply border-none bg-transparent;
+  }
+  .collapse-tabs-design .ant-collapse-content {
+    @apply bg-transparent text-[#8A624A] text-base leading-6 pt-0 border-t-0;
+  }
+  .collapse-tabs-design .ant-collapse-header-text p {
+    @apply text-[#6D6D6D] text-xl leading-[30px] font-GeorgiaRegular;
+  }
+  .white-bg-after::after {
+    @apply bg-white absolute content-[""] w-1/3 h-[calc(100%-106px)] right-0 top-1/2 -translate-y-1/2 z-[-1];
+  }
+  .form-design input,
+  .form-design textarea {
+    @apply border border-[#444] rounded-none text-[#444];
+  }
+  .form-design label {
+    @apply text-[#444] text-base font-GeorgiaRegular;
+  }
+  .form-design input:focus,
+  .form-design textarea:focus {
+    @apply border-[#444];
+  }
+  .form-design input:hover,
+  .form-design textarea:hover {
+    @apply border-[#444];
+  }
+  .form-design .ant-form-item {
+    @apply mb-[11px];
+  }
+  .custom-footer h5 {
+    @apply text-[#535353] text-2xl leading-[30px] pb-7 font-GeorgiaRegular;
+  }
+  .custom-footer ul li {
+    @apply text-[#535353] text-sm tracking-[1.6px] font-light leading-[14px] mb-3 cursor-pointer;
+  }
+  .custom-footer p {
+    @apply text-[#535353] text-sm tracking-[1.6px] font-normal leading-[18px] mb-3;
+  }
+  .footer-form input {
+    @apply bg-transparent border-b border-[#444] text-[#9D9D9D] rounded-none border-t-0 border-x-0;
+  }
+  .footer-form input:focus {
+    @apply border-[#444] shadow-none;
+  }
+  .custom-footer .address-footer {
+    @apply text-[#444] text-base leading-6 tracking-normal text-end mb-0 pt-12 pb-16;
+  }
+  .search-by-image .search-image-item img{
+    @apply h-[90vh] w-full object-cover;
+  }
+}
+
+@layer utilities {
+  .form-box-shadow {
+    box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.15);
+  }
+  .focus-shadow-none:focus {
+    box-shadow: none;
+  }
+  .component-button:hover {
+    background-color: transparent !important;
+  }
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee-content {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+  }
+  .collapse-tabs-design .ant-collapse-expand-icon {
+    display: none !important;
+  }
+  .collapse-tabs-design .ant-collapse-item .ant-collapse-header-text img {
+    transform: rotate(270deg) !important;
+  }
+  .collapse-tabs-design
+    .ant-collapse-item.ant-collapse-item-active
+    .ant-collapse-header-text
+    img {
+    transform: rotate(0deg) !important;
+  }
+  .collapse-tabs-design .ant-collapse-item {
+    border-color: #a69171;
+  }
+  .collapse-tabs-design .ant-collapse-item:last-child {
+    border: 0px;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 }
