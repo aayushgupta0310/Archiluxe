@@ -37,7 +37,7 @@ const Home = () => {
         </div>
       </div>
       {/* search type form */}
-      <div className="mt-[-46px] relative z-20">
+      <div className="mt-[-46px] relative z-20 container mx-auto">
         <SearchForm onClick ={()=>navigate(SEARCH_BY_IMAGE_URL)}/>
       </div>
       {/* Discover Design */}

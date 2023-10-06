@@ -5,9 +5,12 @@ import SearchSliderImage2 from "../../assets/svg-icons/search-image-slider2.svg"
 import SearchForm from "../../sub-components/SearchForm";
 import { useState } from "react";
 import UploadImageModal from "../../sub-components/UploadImageModal";
+import { Navigate, useNavigate } from "react-router";
+import { AI_RECONIZATION_URL } from "../../routes";
 
 const SearchByImage = () => {
   const [imageUploadModal, setImageUploadModal] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
       <MainContainer>
@@ -16,7 +19,7 @@ const SearchByImage = () => {
             autoplay
             dots={false}
             slidesToScroll={1}
-            speed={500}
+            speed={1000}
             infinite={true}
           >
             <div className="search-image-item">
@@ -36,6 +39,7 @@ const SearchByImage = () => {
             open={imageUploadModal}
             handleClose={()=>setImageUploadModal(false)}
             title={""}
+            onClick={()=>navigate(AI_RECONIZATION_URL)}
         />
       )}
     </>

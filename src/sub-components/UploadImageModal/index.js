@@ -3,7 +3,7 @@ import UploadImage from "../../assets/svg-icons/upload-image.svg";
 import { PlusCircleFilled } from "@ant-design/icons";
 import { Button } from "antd";
 
-const UploadImageModal = ({ open, handleClose, title }) => {
+const UploadImageModal = ({ open, handleClose, title ,onClick}) => {
   return (
     <ComponentModal
       open={open}
@@ -16,7 +16,7 @@ const UploadImageModal = ({ open, handleClose, title }) => {
           <div className="pb-7">
             <img src={UploadImage} alt="Upload-Image" className="m-auto" />
           </div>
-          <Button className="flex items-center gap-2 bg-[#946039] h-10 w-[181px] mx-auto">
+          <Button onClick={onClick} className="flex items-center gap-2 bg-[#946039] h-10 w-[181px] mx-auto">
             <PlusCircleFilled className="text-[#ffffff]" />
             <p className="text-sm font-bold text-white">Upload your image</p>
           </Button>

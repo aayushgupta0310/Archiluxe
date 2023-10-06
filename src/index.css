@@ -32,6 +32,15 @@ code {
   .header-custom ul li {
     @apply text-white text-sm cursor-pointer font-GeorgiaRegular;
   }
+  .header-dark .header-custom ul li{
+    @apply text-[#444444];
+  }
+  .header-dark .header-border-black{
+    @apply border-[#444444];
+  }
+  .header-dark .header-login-btn-dark{
+    @apply bg-[#444] text-[#ffffff]
+  }
   .carousel-home .carousel-item img {
     @apply h-[457px] object-cover max-w-[285px] w-full;
   }
@@ -98,9 +107,16 @@ code {
   .search-by-image .search-image-item img{
     @apply h-[90vh] w-full object-cover;
   }
+  .header-white{
+    @apply absolute left-1/2 -translate-x-1/2 w-full top-0 border-b border-white z-50;
+  }
+  .header-dark{
+    @apply w-full  top-0 border-b border-[#444] text-[#444] bg-[#FFFAF3];
+  }
 }
 
 @layer utilities {
+  
   .form-box-shadow {
     box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.15);
   }
