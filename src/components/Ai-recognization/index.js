@@ -51,7 +51,7 @@ const AiRecognization = () => {
               </div>
             </Carousel>
             <div
-              className="rotate-90 max-w-fit absolute bottom-6 left-1/2 -translate-x-1/2 "
+              className="rotate-90 max-w-fit absolute bottom-6 left-1/2 -translate-x-1/2 cursor-pointer"
               onClick={() => {
                 carouselRef.current.next();
               }}
